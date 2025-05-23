@@ -1,0 +1,17 @@
+[
+    {
+      "orderId": "ORD001",
+      "customerName": "Aulia Rahma",
+      "status": "Completed",
+      "totalPrice": 250000,
+      "orderDate": "2025-04-01"
+    },
+    {
+      "orderId": "ORD002",
+      "customerName": "Budi Santoso",
+      "status": "Pending",
+      "totalPrice": 175000,
+      "orderDate": "2025-04-02"
+    }
+  ]
+  

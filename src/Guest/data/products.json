@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Barbeque Steak",
+    "price": "25.000",
+    "image": "./img/Steak.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Mie Ayam Komplit",
+    "price": "20.000",
+    "image": "./img/MieAyam.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Gado-Gado Spesial",
+    "price": "18.000",
+    "image": "./img/Gado.jpg"
+  }
+]

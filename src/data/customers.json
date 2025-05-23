@@ -1,0 +1,17 @@
+[
+    {
+      "customerId": "CUST001",
+      "customerName": "Dina Lestari",
+      "email": "dina@example.com",
+      "phone": "08123456789",
+      "loyalty": "Gold"
+    },
+    {
+      "customerId": "CUST002",
+      "customerName": "Eko Prasetyo",
+      "email": "eko@example.com",
+      "phone": "08198765432",
+      "loyalty": "Silver"
+    }
+  ]
+  
