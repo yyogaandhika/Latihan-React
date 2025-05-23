@@ -2,7 +2,7 @@ import "./assets/tailwind.css";
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Loading from "./components/Loading";
-import ErrorBoundary from "./components/ErroBoundary";
+import ErrorBoundary from "./components/ErrorBoundary";
 import { GuestLayout } from "./Guest/Layouts/GuestLayout";
 import { Guest } from "./Guest/pages/Guest";
 
