@@ -5,6 +5,7 @@ import Loading from "./components/Loading";
 import ErrorBoundary from "./components/ErroBoundary";
 import { GuestLayout } from "./Guest/Layouts/GuestLayout";
 import { Guest } from "./Guest/pages/Guest";
+import Customers from "./pages/customers";
 
 // // import Dashboard from "./pages/Dashboard";
 // import { Routes, Route } from "react-router-dom";
