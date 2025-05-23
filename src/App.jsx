@@ -19,8 +19,8 @@ import { Guest } from "./Guest/pages/Guest";
 // import Forgot from "./pages/Auth/Forgot";
 
 const Dashboard = React.lazy(() => import("./pages/Dashboard"))
-const Customers = React.lazy(() => import("./pages/customers"))
-const Orders = React.lazy(() => import("./pages/orders"))
+const Customers = React.lazy(() => import("./pages/Customers"))
+const Orders = React.lazy(() => import("./pages/Orders"))
 const NotFound = React.lazy(() => import("./pages/NotFound"))
 const ErrorPage = React.lazy(() => import("./components/ErrorPage"))
 const MainLayout = React.lazy(() => import("./layouts/MainLayout"))
