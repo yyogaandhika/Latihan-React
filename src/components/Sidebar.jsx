@@ -1,4 +1,5 @@
-import { AiOutlineUser } from "react-icons/ai"; 
+import { MdFastfood } from "react-icons/md"; 
+import { AiOutlineUser } from "react-icons/ai";
 import { MdOutlineFastfood } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { BsFillPersonFill } from "react-icons/bs";
@@ -47,7 +48,7 @@ export default function Sidebar() {
           </li>
           <li>
             <NavLink id="menu-2" to="/users" className={menuClass}>
-            <AiOutlineUser className="mr-4 text-xl" />
+              <AiOutlineUser className="mr-4 text-xl" />
               User
             </NavLink>
           </li>
@@ -58,9 +59,9 @@ export default function Sidebar() {
             </NavLink>
           </li>
           <li>
-            <NavLink id="menu-4" to="/customers" className={menuClass}>
-              <BsFillPersonFill className="mr-4 text-xl" />
-              Customers
+            <NavLink id="menu-4" to="/products" className={menuClass}>
+              <MdFastfood className="mr-4 text-xl" />
+              Products
             </NavLink>
           </li>
           <li>

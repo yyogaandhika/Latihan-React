@@ -18,72 +18,74 @@ import { Guest } from "./Guest/pages/Guest";
 // import Register from "./pages/Auth/Register";
 // import Forgot from "./pages/Auth/Forgot";
 
-const Dashboard = React.lazy(() => import("./pages/Dashboard"))
-// const Customers = React.lazy(() => import("./pages/Customers"))
-const Orders = React.lazy(() => import("./pages/Orders"))
-const NotFound = React.lazy(() => import("./pages/NotFound"))
-const ErrorPage = React.lazy(() => import("./components/ErrorPage"))
-const MainLayout = React.lazy(() => import("./layouts/MainLayout"))
-const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"))
-const Login = React.lazy(() => import("./pages/Auth/Login"))
-const Register = React.lazy(() => import("./pages/Auth/Register"))
-const Forgot = React.lazy(() => import("./pages/Auth/Forgot"))
-const User = React.lazy(() => import("./pages/User"))
-
-
+const Dashboard = React.lazy(() => import("./pages/Dashboard"));
+const Customers = React.lazy(() => import("./pages/Customers"));
+const Orders = React.lazy(() => import("./pages/Orders"));
+const NotFound = React.lazy(() => import("./pages/NotFound"));
+const ErrorPage = React.lazy(() => import("./components/ErrorPage"));
+const MainLayout = React.lazy(() => import("./layouts/MainLayout"));
+const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"));
+const Login = React.lazy(() => import("./pages/Auth/Login"));
+const Register = React.lazy(() => import("./pages/Auth/Register"));
+const Forgot = React.lazy(() => import("./pages/Auth/Forgot"));
+const User = React.lazy(() => import("./pages/User"));
+const Products = React.lazy(() => import("./pages/Products"));
+const ProductDetail = React.lazy(() => import("./components/ProductDetail"));
 
 function App() {
   return (
     <ErrorBoundary>
-    <Suspense fallback={<Loading/>}>
-    <Routes>
-      <Route
-        path="/error/400"
-        element={
-          <ErrorPage
-            code="400"
-            description="Bad Request. Please check your input."
-            image="/img/400.png"
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route
+            path="/error/400"
+            element={
+              <ErrorPage
+                code="400"
+                description="Bad Request. Please check your input."
+                image="/img/400.png"
+              />
+            }
           />
-        }
-      />
-      <Route
-        path="/error/401"
-        element={
-          <ErrorPage
-            code="401"
-            description="Unauthorized. Please login to continue."
-            image="/img/401.png"
+          <Route
+            path="/error/401"
+            element={
+              <ErrorPage
+                code="401"
+                description="Unauthorized. Please login to continue."
+                image="/img/401.png"
+              />
+            }
           />
-        }
-      />
-      <Route
-        path="/error/403"
-        element={
-          <ErrorPage
-            code="403"
-            description="Forbidden. You do not have access."
-            image="/img/403.png"
+          <Route
+            path="/error/403"
+            element={
+              <ErrorPage
+                code="403"
+                description="Forbidden. You do not have access."
+                image="/img/403.png"
+              />
+            }
           />
-        }
-      />
-      <Route element={<MainLayout />}>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/orders" element={<Orders />} />
-        <Route path="/customers" element={<Customers />} />
-        <Route path="/users" element={<User/>}/>
-      </Route>
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/customers" element={<Customers />} />
+            <Route path="/users" element={<User />} />
+            <Route path="products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductDetail />} />
+          </Route>
 
-      <Route element={<AuthLayout />}>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/forgot" element={<Forgot />} />
-      </Route>
-      
-      <Route element={<GuestLayout />}>
-        <Route path="/guest" element={<Guest />} />
-      </Route>
-      <Route
+          <Route element={<AuthLayout />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/forgot" element={<Forgot />} />
+          </Route>
+
+          <Route element={<GuestLayout />}>
+            <Route path="/guest" element={<Guest />} />
+          </Route>
+          <Route
             path="*"
             element={
               <ErrorPage
@@ -93,8 +95,8 @@ function App() {
               />
             }
           />
-    </Routes>
-    </Suspense>
+        </Routes>
+      </Suspense>
     </ErrorBoundary>
   );
 }

@@ -16,32 +16,32 @@ export default function User() {
   if (loading) return <p className="text-white">Loading users...</p>;
 
   return (
-    <div className="p-4">
+    <div className="p-6">
       <h1 className="text-2xl font-bold text-white mb-4">User List</h1>
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-gradient-to-r from-purple-600 to-black rounded-lg">
-          <thead className="bg-gradient-to-r from-purple-700 to-black text-white">
-            <tr>
-              <th className="px-4 py-2">ID</th>
-              <th className="px-4 py-2">Name</th>
-              <th className="px-4 py-2">Email</th>
-              <th className="px-4 py-2">Phone</th>
-              <th className="px-4 py-2">Age</th>
+      <div className="overflow-x-auto rounded-xl shadow-lg">
+        <table className="min-w-full bg-gradient-to-b from-black via-purple-900 to-purple-700 text-white rounded-xl">
+          <thead className="bg-black bg-opacity-60">
+            <tr className="text-left text-sm uppercase tracking-wider">
+              <th className="px-4 py-3">ID</th>
+              <th className="px-4 py-3">Name</th>
+              <th className="px-4 py-3">Email</th>
+              <th className="px-4 py-3">Phone</th>
+              <th className="px-4 py-3">Age</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="divide-y divide-purple-800">
             {users.map((user) => (
               <tr
                 key={user.id}
-                className="border-t border-gray-700 text-gray-200 hover:bg-gray-800"
+                className="hover:bg-purple-800/40 transition-colors duration-200"
               >
-                <td className="px-4 py-2">{user.id}</td>
-                <td className="px-4 py-2">
+                <td className="px-4 py-3">{user.id}</td>
+                <td className="px-4 py-3">
                   {user.firstName} {user.lastName}
                 </td>
-                <td className="px-4 py-2">{user.email}</td>
-                <td className="px-4 py-2">{user.phone}</td>
-                <td className="px-4 py-2">{user.age}</td>
+                <td className="px-4 py-3">{user.email}</td>
+                <td className="px-4 py-3">{user.phone}</td>
+                <td className="px-4 py-3">{user.age}</td>
               </tr>
             ))}
           </tbody>
