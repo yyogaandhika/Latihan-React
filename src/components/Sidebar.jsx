@@ -64,6 +64,12 @@ export default function Sidebar() {
             </NavLink>
           </li>
           <li>
+            <NavLink id="menu-5" to="/notes" className={menuClass}>
+              <BsFillPersonFill className="mr-4 text-xl" />
+              Notes
+            </NavLink>
+          </li>
+          <li>
             <NavLink id="menu-error400" to="/error/400" className={menuClass}>
               <span className="mr-4 text-xl">400</span>
               Error 400

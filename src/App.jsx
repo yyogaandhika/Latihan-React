@@ -6,20 +6,9 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { GuestLayout } from "./Guest/Layouts/GuestLayout";
 import { Guest } from "./Guest/pages/Guest";
 
-// // import Dashboard from "./pages/Dashboard";
-// import { Routes, Route } from "react-router-dom";
-// import Orders from "./pages/orders";
-// import Customers from "./pages/customers";
-// import NotFound from "./pages/NotFound";
-// import ErrorPage from "./components/ErrorPage";
-// import MainLayout from "./layouts/MainLayout";
-// import AuthLayout from "./layouts/AuthLayout";
-// import Login from "./pages/Auth/Login";
-// import Register from "./pages/Auth/Register";
-// import Forgot from "./pages/Auth/Forgot";
 
 const Dashboard = React.lazy(() => import("./pages/Dashboard"))
-// const Customers = React.lazy(() => import("./pages/Customers"))
+const Customers = React.lazy(() => import("./pages/Customers"))
 const Orders = React.lazy(() => import("./pages/Orders"))
 const NotFound = React.lazy(() => import("./pages/NotFound"))
 const ErrorPage = React.lazy(() => import("./components/ErrorPage"))
@@ -29,7 +18,7 @@ const Login = React.lazy(() => import("./pages/Auth/Login"))
 const Register = React.lazy(() => import("./pages/Auth/Register"))
 const Forgot = React.lazy(() => import("./pages/Auth/Forgot"))
 const User = React.lazy(() => import("./pages/User"))
-
+const Notes = React.lazy(() => import("./pages/Notes"))
 
 
 function App() {
@@ -72,6 +61,7 @@ function App() {
         <Route path="/orders" element={<Orders />} />
         <Route path="/customers" element={<Customers />} />
         <Route path="/users" element={<User/>}/>
+         <Route path="/notes" element={<Notes/>}/>
       </Route>
 
       <Route element={<AuthLayout />}>
