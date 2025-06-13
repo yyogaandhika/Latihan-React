@@ -100,7 +100,7 @@ export default function Orders() {
                             placeholder="Total Price"
                             value={newOrder.totalPrice}
                             onChange={handleInputChange}
-                            className="p-2 rounded bg-purple-600 text-white border border-purple-400 placeholder-gray-300"
+                            className="p-2 rounded bg-purple-800 text-white border border-purple-600 placeholder-gray-300"
                             required
                         />
                         <input
@@ -118,8 +118,8 @@ export default function Orders() {
                 </form>
             )}
 
-            <div className="overflow-x-auto bg-purple-900 rounded-lg shadow-lg border border-purple-700">
-                <table className="min-w-full table-auto text-sm bg-white text-black">
+            <div className="overflow-x-auto bg-gradient-to-b from-black via-purple-900 to-purple-700 rounded-lg shadow-lg border border-purple-700">
+                <table className="min-w-full table-auto text-sm text-white">
                     <thead className="bg-purple-800 text-white font-semibold">
                         <tr>
                             <th className="px-6 py-3 text-left">Order ID</th>
@@ -130,9 +130,9 @@ export default function Orders() {
                             <th className="px-6 py-3 text-left">Actions</th>
                         </tr>
                     </thead>
-                    <tbody className="bg-white text-black">
+                    <tbody>
                         {orders.map((order) => (
-                            <tr key={order.orderId} className="hover:bg-purple-100 transition-colors duration-300">
+                            <tr key={order.orderId} className="hover:bg-purple-800/40 transition-colors duration-300">
                                 {editingOrderId === order.orderId ? (
                                     <>
                                         <td className="px-6 py-4">
